@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "dZENcode",
-  description: "dZENcode test task",
-};
+import Header from "@/components/Header";
+import NavigationMenu from "@/components/NavigationMenu";
 
 export default function RootLayout({
   children,
@@ -15,7 +8,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <NavigationMenu />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
