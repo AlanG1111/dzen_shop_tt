@@ -9,9 +9,13 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <Header />
-        <NavigationMenu />
-        <main>{children}</main>
+        <div className='vh-100 vw-100'>
+          <Header />
+          <div className='d-flex h-100'>
+            <NavigationMenu />
+            <main className='w-100'>{children}</main>
+          </div>
+        </div>
       </body>
     </html>
   );
